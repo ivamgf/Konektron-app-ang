@@ -1,0 +1,22 @@
+.style-sign{
+  position: relative;
+  float: right;
+  margin-left: 0%;
+  margin-bottom: 1%;
+}
+.style-dropdown{
+  margin-bottom: 1%;
+}
+.style-font-hello{
+  font-size: 12px;
+}
+@media only screen and (max-width: 768px){
+  .style-dropdown{
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .style-dropdown{
+    margin-bottom: 1.5%;
+  }
+}

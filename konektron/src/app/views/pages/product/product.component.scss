@@ -1,0 +1,248 @@
+section {
+  Background-color: white
+}
+.style-group{
+  margin-left: 10%;
+  border: 0px;
+}
+.style-item{
+  position: relative;
+  float: right;
+}
+.style-filters{
+  width: 10%;
+}
+.style-title-group{
+  font-size: 14px;
+  font-weight: bold;
+}
+.style-container{
+  margin-top: 2%;
+  text-align: center;
+  float: center;
+  margin-bottom: 2%;
+  position: relative;
+}
+.style-prod{
+  margin-bottom: 5%;
+}
+.style-card-news{
+  margin-bottom: 5%;
+  margin-top: -1.2%;
+  height: 700px;
+}
+.style-img{
+  margin-top: 2%;
+  width: 150%;
+  margin-right: 15%;
+  float: left;
+  position: relative;
+}
+.btn{
+  padding: 0%;
+}
+.list-group-item{
+  padding: .75rem 2.25rem 1.0rem .9rem;
+}
+.style-img-prod{
+  margin-top: 2%;
+  position: absolute;
+  width: 350px;
+  float: center;
+}
+.style-group-img{
+  position: absolute;
+  widows: 100px;
+  margin-top: 10%;  
+}
+.style-sec-card{
+  width: 800px;
+  border: 0px;
+  margin-left: 5%;
+}
+.style-container-button{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.style-card-title{
+  font-size: 14px;
+}
+.style-text-card{
+  font-size: 11px
+}
+.card-body{
+  padding: 0.50rem;
+}
+.style-nav-filters{
+  display: none;
+}
+.row{
+  margin-right: 0px;
+}
+.style-dropdown{
+  font-size: 10px;
+}
+.style-dropdown-title{
+  font-size: 10px;
+}
+.style-order{
+ width: 240px;
+}
+.style-group-mob{
+  display: none;
+}
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .style-sec-card{
+    width: 700px;
+    border: 0px;
+    margin-left: 5%;
+  }
+  .style-img-prod{
+    margin-top: 2%;
+    position: absolute;
+    width: 300px;
+    float: center;
+    margin-right: 5%;
+  }
+  .style-card-news{
+    margin-bottom: 5%;
+    margin-top: -1.2%;
+    height: 700px;
+  }
+  .zoom {
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .style-sec-card{
+    width: 550px;
+    border: 0px;
+    margin-left: 5%;
+  }
+  .style-title-group{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .style-img-prod{
+    margin-top: 2%;
+    position: absolute;
+    width: 250px;
+    float: center;
+  }
+  .style-card-news{
+    margin-bottom: 5%;
+    margin-top: -1.2%;
+    height: 400px;
+  }
+  .zoom {
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px){
+  .style-sec-card{
+    width: 400px;
+    border: 0px;
+    margin-left: 5%;
+  }
+  .style-filters{
+    font-size: 10px;
+  }
+  .style-title-group{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .style-img-prod{
+    margin-top: 2%;
+    position: absolute;
+    width: 200px;
+    float: center;
+  }
+  .style-img{
+    margin-top: 2%;
+    width: 450%;
+    margin-right: 15%;
+    float: left;
+    position: relative;
+  }
+  .style-card-news{
+    margin-bottom: 5%;
+    margin-top: -1.2%;
+    height: 400px;
+  }
+  .style-filters{
+    display: none;
+  }
+  .zoom {
+    padding: 10px;
+    transition: transform .2s; /* Animation */
+    width: 150px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+@media only screen and (max-width: 576px){
+  .style-sec-card{
+    width: 200px;
+    border: 0px;
+    margin-left: 5%;
+  }
+  .style-filters{
+    display: none;
+  }
+  .style-nav-filters{
+    display: inline-block;
+  }
+  .style-img-prod{
+    margin-top: 5%;
+    position: absolute;
+    width: 150px;
+    float: center;
+  }
+  .style-card-news{
+    margin-bottom: 5%;
+    margin-top: -1.2%;
+    height: 300px;
+  }
+  .style-order{
+    width: 240px;
+    margin-left: 10%;
+   }
+   .zoom {
+    padding: 20px;
+    transition: transform .2s; /* Animation */
+    width: 130px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+

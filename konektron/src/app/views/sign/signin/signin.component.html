@@ -1,0 +1,77 @@
+<section>
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-end">
+  <ul class="navbar-nav">
+  <div class="row style-order">
+    <li class="nav-item active">
+      <div class="dropdown">
+        <button id="providers" type="button" class="btn btn-link">Sou um Fornecedor!</button>
+      </div>
+    </li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Media top -->
+<div class="media container style-media">
+
+  <div class="card col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 style-card-news">
+
+  <img src="/assets/images/logo-konektron.png" class="style-logo container mx-auto" style="width:120px">
+  <h4 class="mx-auto style-login">Login</h4>
+      <div class="card-body">
+
+        <form [formGroup]="formSignin">
+          <label for="email">Email:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input id="email" type="email" class="form-control"
+           formControlName="email" placeholder="Digite seu e-mail!" required>
+          </div>
+
+          <div id="alert1" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> O campo de e-mail não pode estar vazio!
+          </div>
+
+          <label for="pass">Senha:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input id="password" minlength="6" maxlength="8" type="password" class="form-control"
+            formControlName="password" placeholder="Digite sua senha de 6 à 8 dígitos!" required>
+          </div>
+
+          <div id="alert2" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> O campo de senha não pode estar vazio!
+          </div>
+
+          <div id="alert3" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> O campo de senha deve ter de 6 à 8 dígitos!
+          </div>
+
+          <div class="form-check checkbox">
+            <label class="checkbox-inline style-label-checked">
+              <input id="remember" type="checkbox" class="form-check-input style-checked form-control"
+              formControlName="remember"> lembrar-me
+            </label>
+          </div>
+          <br>
+          <div>
+            <button id="recovery" type="button" class="btn btn-link" routerLink="/forgot">Esqueci a Senha!</button>
+            <button id="register" type="button" class="btn btn-link style-btn-link" routerLink="/signup">Não tenho cadastro!</button>
+          </div>
+
+        </form>
+        <button type="button" class="btn btn-primary style-btn-submit" (click)="login()">Enviar</button>
+      </div>
+
+  </div>
+</div>
+
+</section>

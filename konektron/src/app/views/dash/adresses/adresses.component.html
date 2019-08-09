@@ -1,0 +1,204 @@
+<section>
+    <!-- Grey with black text -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-end">
+      <ul class="navbar-nav">
+      <div class="row style-order">
+        <li class="nav-item active">
+
+        </li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="container style-container">
+      <h4>Painel de Controle</h4>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><i class="fas fa-sign-out-alt"></i> Sair</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <i class="fas fa-door-open"></i> Você deseja realmente sair da sua conta?
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="logout()">Sair</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <div class="container style-nav-mob">
+        <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Minha Conta</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" routerLink="/dashboard">Painel</a>
+              <a class="dropdown-item" href="#" routerLink="/profile">Perfil</a>
+              <a class="dropdown-item" href="#" routerLink="/orders">Meus Pedidos</a>
+              <a class="dropdown-item" href="#" routerLink="/adresses">Meus Endereços</a>
+              <a class="dropdown-item" href="#" routerLink="/cards">Meus Cartões</a>
+              <a class="dropdown-item" href="#" routerLink="/recovery">Alterar Senha</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <ul class="list-group">
+      <li class="list-group-item style-group">
+        <div class="row style-prod">
+
+        <!-- Media top -->
+        <div class="media">
+          <div class="media-body">
+
+          <div class="row">
+            <div class="style-filters">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/dashboard">
+                  <h6>Minha Conta</h6>
+                </button>
+              </li>
+
+              <li class="list-group-item">
+                <img class="card-img-top style-img" src="https://konektron.orkneytech.com.br/app_web/images/avatar/avatar_masc.png" alt="Card image" style="width:60%">
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/dashboard">Painel</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/profile">Perfil</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/orders">Meus Pedidos</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/adresses">Meus Endereços</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/cards">Meus Cartões</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" routerLink="/recovery">Alterar Senha</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Sair</button>
+              </li>
+            </ul>
+            </div>
+
+            <div class="card style-sec-card">
+              <div class="card-body">
+
+                <div class="card col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 style-card-news">
+                <div class="card-body">
+                  <h4 class="card-title style-card-title">Meus Endereços</h4>
+                  <p class="card-text style-text-card">Cadastre um endereço!</p>
+
+                  <div class="card-body">
+
+                    <div id="alert2" class="alert alert-success alert-dismissible style-alert">
+                      <button type="button" class="close" data-dismiss="alert">&times;</button>
+                      <strong>Parabéns!</strong> Cadastro de Endereço Realizado com Sucesso!<br>
+                    </div>
+
+                    <form [formGroup]="formAdress">
+
+                      <label for="cep">CEP:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <input id="cep" type="text" class="form-control" [textMask]="{mask: maskCep}"
+                        (change)="cepAdress()" formControlName="cep" placeholder="Digite seu CEP" required>
+                        <button type="button" class="btn btn-light" (click)="searchCep()">Não sei o meu CEP!</button>
+                      </div>
+
+                      <label for="street">Logradouro:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-road"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="street" formControlName="street" required>
+                      </div>
+
+                      <label for="number">Número:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-sort-numeric-up"></i></span>
+                        </div>
+                        <input type="number" class="form-control" id="number" formControlName="number" required>
+                      </div>
+
+                      <label for="compl">Complemento:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-building"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="compl" formControlName="compl" required>
+                      </div>
+
+                      <label for="block">Bairro:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-calendar-week"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="block" formControlName="block" required>
+                      </div>
+
+                      <label for="city">Cidade:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-map"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="city" formControlName="city" required>
+                      </div>
+
+                      <label for="uf">UF:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-globe-americas"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="uf" formControlName="uf" required>
+                      </div>
+
+                      <div id="alert1" class="alert alert-danger alert-dismissible style-alert">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Erro!</strong> Há campos vazios, você deve preenchê-los para prosseguir!
+                      </div>
+
+                    </form>
+                    <button type="button" class="btn btn-primary style-btn-submit" (click)="regAdress()">Salvar</button>
+                  </div>
+
+                </div>
+              </div>
+
+              </div>
+            </div>
+
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </li>
+    </ul>
+
+</section>
