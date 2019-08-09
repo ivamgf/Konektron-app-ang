@@ -1,0 +1,81 @@
+<section>
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-end">
+  <ul class="navbar-nav">
+  <div class="row style-order">
+    <li class="nav-item active">
+      <div class="dropdown">
+        <button id="providers" type="button" class="btn btn-link">Sou um Fornecedor!</button>
+      </div>
+    </li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Media top -->
+<div class="media container style-media">
+
+  <div class="card col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 style-card-news">
+
+  <img src="/assets/images/logo-konektron.png" class="style-logo container mx-auto" style="width:120px">
+  <h4 class="mx-auto style-login">Recuperar a Senha</h4>
+      <div class="card-body">
+
+        <div id="alert4" class="alert alert-success alert-dismissible style-alert">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Parabéns!</strong> Recuperação de senha Realizada com Sucesso!<br>
+          <button type="button" class="btn btn-success btn-block" (click)="backSignin()">Ir para a página de Login</button>
+        </div>
+
+        <form [formGroup]="formForgot">
+          <label for="pass">Senha:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input id="password" minlength="6" maxlength="8" type="password" class="form-control"
+            formControlName="password" placeholder="Digite sua senha de 6 à 8 dígitos!" required>
+          </div>
+
+          <div id="alert1" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> O campo de senha não pode estar vazio!
+          </div>
+
+          <label for="pass">Confirmação de Senha:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input id="confirm" minlength="6" maxlength="8" type="password" class="form-control"
+            formControlName="confirm" placeholder="Confirme sua senha!" required>
+          </div>
+
+          <div id="alert2" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> O campo de confirmação de senha não pode estar vazio!
+          </div>
+
+          <div id="alert3" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> Os campos de senha e confirmação de senha devem ser iguais!
+          </div>
+
+          <div id="alert5" class="alert alert-danger alert-dismissible style-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Erro!</strong> Os campos de senha e confirmação de senhas devem ter de 6 à 8 dígitos!
+          </div>
+
+          <br>
+          <div>
+            <button id="recovery" type="button" class="btn btn-link" routerLink="/signin">Voltar</button>
+          </div>
+
+        </form>
+        <button type="button" class="btn btn-primary style-btn-submit" (click)="forgot()">Enviar</button>
+      </div>
+
+  </div>
+</div>
+
+</section>

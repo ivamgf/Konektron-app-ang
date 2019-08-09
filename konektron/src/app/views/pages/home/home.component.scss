@@ -1,0 +1,75 @@
+section {
+    Background-color: white
+  }
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.style-img {
+  //width: 70%
+  height: 100%;
+}
+.style-caption {
+  margin-bottom: 3%
+}
+.style-control{
+  margin-bottom: 2%
+}
+.style-text{
+  text-align: center
+}
+.style-icons{
+  display: inline;
+  margin-left: 14%
+}
+.style-list{
+  margin-top: -2%
+}
+.style-ico{
+  margin-top: 10%;
+  margin-left: -5%
+}
+.style-card{
+  border: 0;
+  margin-left: 17%;
+  margin-top: 5%
+}
+.style-title{
+  text-align: center;
+  margin-top: 2%
+}
+.style-news{
+  display: inline
+}
+.style-text-card{
+  font-size: 11px
+}
+.style-card-news{
+  margin-left: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.style-container{
+  margin-left: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%
+}
+@media only screen and (min-width: 557px) and (max-width: 992px){
+  .card-title{
+    font-size: 14px;
+  }
+  .style-text-card{
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 600px){
+  .card-title{
+    font-size: 12px;
+  }
+  .style-text-card{
+    font-size: 10px;
+  }
+  .card-img-top{
+    width: 50%;
+  }
+}
